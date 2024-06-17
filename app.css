@@ -1,0 +1,53 @@
+.carousel-item-principal {
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 991px) {
+    .carousel-item-principal {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 992px) { 
+    .carousel-item-principal {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 1400px) { 
+    .carousel-item-principal {
+        height: calc(100vh - 56px);
+    }
+}
+
+/* Flechas carousel */
+.carousel .bi {
+    font-size: 50px;
+    color: gray;
+}
+
+.carousel-control-next {
+    justify-content: end;
+} 
+
+.carousel-control-prev {
+    justify-content: start;
+}
+
+
+/* Carousel opiniones */
+
+/* ocultando la mitad de los elementos para que quepan */
+@media (max-width: 767px) {
+    #carousel_opiniones .card:nth-child(2n+2) {
+        display: none;
+    }
+}
+
+/* ocultando cada 3 elementos para que solo se vean 2 */
+@media (max-width: 991px) {
+    #carousel_opiniones .card:nth-child(3n+3) {
+        display: none;
+    }
+}
