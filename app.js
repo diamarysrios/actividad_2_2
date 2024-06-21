@@ -103,7 +103,7 @@ $(function() {
 
     // Clima Caracas
     $.ajax({
-        url: `http://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Caracas&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Caracas&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -126,7 +126,7 @@ $(function() {
 
     // Clima Charallave
     $.ajax({
-        url: `http://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Charallave&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Charallave&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -149,7 +149,7 @@ $(function() {
 
     // Clima Maracaibo
     $.ajax({
-        url: `http://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Maracaibo&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Maracaibo&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -172,7 +172,7 @@ $(function() {
 
     // López de Micay -> una de las cudades mas lluviosas del mundo en Colombia
     $.ajax({
-        url: `http://api.weatherapi.com/v1/current.json?key=${llave_api}&q=López%20de%20Micay&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=López%20de%20Micay&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
