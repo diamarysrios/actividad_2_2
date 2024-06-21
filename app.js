@@ -101,9 +101,9 @@ $(function() {
         "Nieve moderada o fuertes nevadas con tormenta en la región": "tormenta_electrica",
     }
 
-    // Clima Caracas
+    // Clima Aeropeurto
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Caracas&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=aeropuerto maiquetia&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -120,7 +120,7 @@ $(function() {
             $("#item1 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de Caracas, verifique su conexión");
+            alert("error al pedir clima del Aeropuerto Internacional Simón Bolívar, verifique su conexión");
         }
     });
 
