@@ -25,9 +25,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Incio</a>
-                    <a class="nav-link">Blog</a>
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link active" aria-current="page" href="/index.html">Incio</a>
+                    <a class="nav-link" href="/index.html#articulo">Articulos</a>
+                    <a class="nav-link" href="/contacto/contacto.htm">Contacto</a>
                 </div>
             </div>
         </div>
@@ -37,57 +37,94 @@
     <!-- carousel-->
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div id="item1" class="carousel-item carousel-item-principal active tormenta_electrica noche">
+            <div id="item1" class="carousel-item carousel-item-principal active">
                 <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
-                    <h3 class="mb-0">Caracas, Venezuela</h3>
-                    <h1>21°C</h1>
-                    <h3>Parcialmente nublado</h3>
-                    <h4>Humedad: XX% | Viento: 4kph NE </h4>
+                    <h3 class="mb-0 ubicacion">Cargando clima ...</h3>
+                    <h1 class="temperatura"></h1>
+                    <h3 class="condicion"></h3>
+                    <h4 class="humedad_y_viento"></h4>
                 </div>
             </div>
-            <!-- <div class="carousel-item carousel-item-principal" style="background-image: url('/img/tiempo2.jpg');"></div>
-            <div class="carousel-item carousel-item-principal" style="background-image: url('/img/tiempo3.jpg');"></div> -->
+            <div id="item2" class="carousel-item carousel-item-principal">
+                <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+                    <h3 class="mb-0 ubicacion">Cargando clima ...</h3>
+                    <h1 class="temperatura"></h1>
+                    <h3 class="condicion"></h3>
+                    <h4 class="humedad_y_viento"></h4>
+                </div>
+            </div>
+            <div id="item3" class="carousel-item carousel-item-principal">
+                <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+                    <h3 class="mb-0 ubicacion">Cargando clima ...</h3>
+                    <h1 class="temperatura"></h1>
+                    <h3 class="condicion"></h3>
+                    <h4 class="humedad_y_viento"></h4>
+                </div>
+            </div>
+            <div id="item4" class="carousel-item carousel-item-principal">
+                <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+                    <h3 class="mb-0 ubicacion">Cargando clima ...</h3>
+                    <h1 class="temperatura"></h1>
+                    <h3 class="condicion"></h3>
+                    <h4 class="humedad_y_viento"></h4>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <i class="bi bi-chevron-left"></i>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <i class="bi bi-chevron-right"></i>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     </div>
     <!-- /carousel-->
 
     <div class="container pb-5">
         <!-- cards articulos -->
-        <h1 class="mt-4">Artículos destacados</h1>
+        <h1 class="mt-4" id="articulo">Artículos</h1>
         <div class="row">
 
             <div class="col-sm-12 col-lg-4 mt-4">
                 <div class="card mx-4">
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                    <img src="/img/articulos/articulo-1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Miami, el destino favorito de los turistas</h5>
-                        <p class="card-text">Se dice que Miami tiene cierto encanto para los turistas, pero ¿Será esto
-                            verdad?</p>
-                        <a href="#" class="btn btn-primary">Leer</a>
+                        <h5 class="card-title">¿Cómo se hacen los pronósticos del tiempo?</h5>
+                        <p class="card-text">Los pronósticos meteorológicos se realizan gracias a los modelos numéricos
+                            que, con complejos cálculos matemáticos,
+                            son capaces de hacer simulaciones a futuro del comportamiento de las masas de aire en las
+                            diferentes capas atmosféricas.</p>
+                        <a href="/articulos/articulo_1.html" class="btn btn-primary">Leer</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-12 col-lg-4 mt-4">
                 <div class="card mx-4">
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                    <img src="/img/articulos/articulo-2.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Miami, el destino favorito de los turistas</h5>
-                        <p class="card-text">Se dice que Miami tiene cierto encanto para los turistas, pero ¿Será esto
-                            verdad?</p>
-                        <a href="#" class="btn btn-primary">Leer</a>
+                        <h5 class="card-title">¿Por qué es importante el clima?</h5>
+                        <p class="card-text">El clima es importante para las regiones debido a que gracias a las
+                            características del mismo hace diferente
+                            a una región de otra, tanto por su temperatura o humedad, así como también como los recursos
+                            existentes en esa zona.</p>
+                        <a href="/articulos/articulo_2.html" class="btn btn-primary">Leer</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-12 col-lg-4 mt-4">
                 <div class="card mx-4">
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                    <img src="/img/articulos/articulo-3.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Miami, el destino favorito de los turistas</h5>
-                        <p class="card-text">Se dice que Miami tiene cierto encanto para los turistas, pero ¿Será esto
-                            verdad?</p>
-                        <a href="#" class="btn btn-primary">Leer</a>
+                        <h5 class="card-title">El clima de nuestro planeta</h5>
+                        <p class="card-text">El clima es el conjunto de fenómenos atmosféricos (temperatura, presión,
+                            lluvia y viento) que caracterizan
+                            un lugar por largos periodos de tiempo. El clima determina el tipo de vegetación y la fauna
+                            predominante. </p>
+                        <a href="/articulos/articulo_3.html" class="btn btn-primary">Leer</a>
                     </div>
                 </div>
             </div>
@@ -104,45 +141,42 @@
                     <div class="d-flex justify-content-center">
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">"Me encantan, puedo ver con facilidad cómo
+                                    se moverá el sistema de tormentas en las próximas horas."</p>
                                 <div class="d-flex w-100">
                                     <img src="/img/opiniones/persona-1.png"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
-                                        <p>Viajero frecuente</p>
+                                        <b>Kelly Dominguez</b>
+                                        <p>Docente</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">"La interfaz es muy amigable e intuitiva.
+                                    Encuentro todo lo que necesito de un vistazo."</p>
                                 <div class="d-flex w-100">
                                     <img src="/img/opiniones/persona-2.png"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
-                                        <p>Viajero frecuente</p>
+                                        <b>Carolina Herrera</b>
+                                        <p>Ingeniera</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">"Por fin puedo planificar mis actividades
+                                    sin preocuparme por las sorpresas del clima."</p>
                                 <div class="d-flex w-100">
                                     <img src="/img/opiniones/persona-3.jpg"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
-                                        <p>Viajero frecuente</p>
+                                        <b>Antonio Banderas</b>
+                                        <p>Deportista</p>
                                     </div>
                                 </div>
                             </div>
@@ -154,44 +188,41 @@
                     <div class="d-flex justify-content-center">
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">"Ahora sé exactamente
+                                    cuándo llevar un paraguas o vestirme con ropa de abrigo."</p>
                                 <div class="d-flex w-100">
-                                    <img src="/img/opiniones/persona-3.png"
+                                    <img src="/img/opiniones/persona-4.jpg"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
-                                        <p>Viajero frecuente</p>
+                                        <b>Maria de la Cruz</b>
+                                        <p>Estudiante</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">Perfecta, me permite ver fácilmente los patrones climáticos
+                                    históricos en mi área."</p>
                                 <div class="d-flex w-100">
-                                    <img src="/img/opiniones/persona-1.png"
+                                    <img src="/img/opiniones/persona-5.jpg"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
-                                        <p>Viajero frecuente</p>
+                                        <b>Elena Maldonado</b>
+                                        <p>Doctora</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card mx-4" style="width: 300px;">
                             <div class="card-body">
-                                <p class="card-text">Esto es un ejemplo para la opinion de un cliente, debo acordarme de
-                                    cambiarla luego
-                                    así que dejo un TODO</p>
+                                <p class="card-text">"¡Siempre consulto este sitio antes de viajar!
+                                    Sus pronósticos me ayudan a empacar lo correcto."</p>
                                 <div class="d-flex w-100">
                                     <img src="/img/opiniones/persona-2.png"
                                         style="height: 50px; width: auto; border-radius: 50%;" alt="">
                                     <div class="ms-2">
-                                        <b>Nombre Ejemplo</b>
+                                        <b> Morela Batista</b>
                                         <p>Viajero frecuente</p>
                                     </div>
                                 </div>
@@ -215,7 +246,7 @@
         <!-- /carousel opiniones clientes-->
     </div>
     <!-- footer -->
-    <footer class="bg-dark text-center text-lg-start py-4">
+    <footer class="bg-dark d-flex flex-column justify-content-center align-items-center py-4">
 
         <!-- sección: Social media -->
         <section>
