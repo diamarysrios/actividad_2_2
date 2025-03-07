@@ -124,9 +124,9 @@ $(function() {
         }
     });
 
-    // Clima Charallave
+    // Clima Merida
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Charallave&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=merida%20venezuela&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -143,7 +143,7 @@ $(function() {
             $("#item2 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de Charallave, verifique su conexión");
+            alert("error al pedir clima de Merida, verifique su conexión");
         }
     });
 
