@@ -126,7 +126,7 @@ $(function() {
 
     // Clima Merida
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=merida%20venezuela&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=merida venezuela&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
