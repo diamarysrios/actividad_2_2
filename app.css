@@ -252,6 +252,10 @@ body {
     font-family: 'Times New Roman', Times, serif
 }
 
+.imagen_articulo {
+    width: 100%;
+}
+
 #encabezado {
 
     background-size: cover;
