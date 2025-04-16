@@ -1,4 +1,49 @@
 $(function() {
+
+    const obtenerTemaGuardado = () => localStorage.getItem('tema');
+    const setearTemaGuardado = tema => localStorage.setItem('tema',tema);
+
+    function inicializarTema() {
+        temaActual = obtenerTemaGuardado()
+
+        if (temaActual === null) {
+            setearTemaGuardado('light');
+            temaActual = 'light'
+        }
+
+        if(temaActual == 'light')
+        {
+            $('#suicheCambiarTema').prop('checked', false);
+            $('body').attr('data-bs-theme','light')
+        } else {
+            $('#suicheCambiarTema').prop('checked', true);
+            $('body').attr('data-bs-theme','dark')
+        }
+    }
+
+    // Listener
+    $('#suicheCambiarTema').click(function(e){
+        //e.preventDefault()
+
+        temaActual = obtenerTemaGuardado()
+
+        if (temaActual == 'light')
+        {
+            setearTemaGuardado('dark');
+            $('body').attr('data-bs-theme','dark')
+
+        } else {
+            setearTemaGuardado('light');
+            $('body').attr('data-bs-theme','light')
+        }
+    })
+
+    // Inicializar Tema
+    inicializarTema()
+
+    /**
+     * API de open weather
+     */
     const llave_api = 'fcaf64cc744d4bcb8d615928241306';
 
     // posibles descripciones del clima asociados con una clase de css
@@ -101,9 +146,32 @@ $(function() {
         "Nieve moderada o fuertes nevadas con tormenta en la región": "tormenta_electrica",
     }
 
-    // Clima Aeropeurto
+    // Yellow Knife, Canada -> Suele nevar
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=aeropuerto maiquetia&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Yellowknife&aqi=no&lang=es`,
+        async: false,
+        type: "GET",
+        crossDomain: true,
+        dataType: "json",
+        success: function (respuesta) {
+            console.log(respuesta)
+            // Agregando clase al fondo del carousel
+            $("#item0").addClass(posibles_climas[respuesta.current.condition.text])
+            $("#item0").addClass(respuesta.current.is_day ? 'dia' : 'noche')
+            // Agregando datos del clima
+            $("#item0 .ubicacion").html(respuesta.location.name);
+            $("#item0 .temperatura").html(respuesta.current.temp_c + "C");
+            $("#item0 .condicion").html(respuesta.current.condition.text)
+            $("#item0 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
+        },
+        error: function () {
+            alert("error al pedir clima de López de Micay, verifique su conexión");
+        }
+    });
+
+    // López de Micay -> una de las cudades mas lluviosas del mundo en Colombia
+    $.ajax({
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=López%20de%20Micay&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -120,13 +188,13 @@ $(function() {
             $("#item1 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima del Aeropuerto Internacional Simón Bolívar, verifique su conexión");
+            alert("error al pedir clima de López de Micay, verifique su conexión");
         }
     });
 
-    // Clima Merida
+    // Yakutsk, Rusia -> Un clima bastante frio
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=merida venezuela&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Yakutsk&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -143,13 +211,13 @@ $(function() {
             $("#item2 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de Merida, verifique su conexión");
+            alert("error al pedir clima de López de Micay, verifique su conexión");
         }
     });
 
-    // Clima Maracaibo
+    // Aomori, Japón -> Lugar mas nevado del mundo
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Maracaibo&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Aomori&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -166,13 +234,13 @@ $(function() {
             $("#item3 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de Los Teques, verifique su conexión");
+            alert("error al pedir clima de López de Micay, verifique su conexión");
         }
     });
 
-    // López de Micay -> una de las cudades mas lluviosas del mundo en Colombia
+    // Kuala Lumpur -> Aeropuerto con más relampagos, no se usa el Catatumbo al no tener estación climática confiable en linea
     $.ajax({
-        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=López%20de%20Micay&aqi=no&lang=es`,
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Kuala%20Lumpur%20Airport&aqi=no&lang=es`,
         async: false,
         type: "GET",
         crossDomain: true,
@@ -187,6 +255,29 @@ $(function() {
             $("#item4 .temperatura").html(respuesta.current.temp_c + "C");
             $("#item4 .condicion").html(respuesta.current.condition.text)
             $("#item4 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
+        },
+        error: function () {
+            alert("error al pedir clima de López de Micay, verifique su conexión");
+        }
+    });
+
+    // Lisboa, Portugal -> Aeropuerto que suele tener mal clima
+    $.ajax({
+        url: `https://api.weatherapi.com/v1/current.json?key=${llave_api}&q=Lisboa&aqi=no&lang=es`,
+        async: false,
+        type: "GET",
+        crossDomain: true,
+        dataType: "json",
+        success: function (respuesta) {
+            console.log(respuesta)
+            // Agregando clase al fondo del carousel
+            $("#item5").addClass(posibles_climas[respuesta.current.condition.text])
+            $("#item5").addClass(respuesta.current.is_day ? 'dia' : 'noche')
+            // Agregando datos del clima
+            $("#item5 .ubicacion").html(respuesta.location.name);
+            $("#item5 .temperatura").html(respuesta.current.temp_c + "C");
+            $("#item5 .condicion").html(respuesta.current.condition.text)
+            $("#item5 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
             alert("error al pedir clima de López de Micay, verifique su conexión");
@@ -285,4 +376,8 @@ $(function() {
     cubierto();
     clima_extremo();
 
+
+
 });
+
+
