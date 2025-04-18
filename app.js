@@ -7,8 +7,8 @@ $(function() {
         temaActual = obtenerTemaGuardado()
 
         if (temaActual === null) {
-            setearTemaGuardado('light');
-            temaActual = 'light'
+            setearTemaGuardado('dark');
+            temaActual = 'dark'
         }
 
         if(temaActual == 'light')
@@ -165,7 +165,7 @@ $(function() {
             $("#item0 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de López de Micay, verifique su conexión");
+            alert("error al pedir clima de Yellowknife, verifique su conexión");
         }
     });
 
@@ -211,7 +211,7 @@ $(function() {
             $("#item2 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de López de Micay, verifique su conexión");
+            alert("error al pedir clima de Yakutsk, verifique su conexión");
         }
     });
 
@@ -234,7 +234,7 @@ $(function() {
             $("#item3 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de López de Micay, verifique su conexión");
+            alert("error al pedir clima de Aomori, verifique su conexión");
         }
     });
 
@@ -257,7 +257,7 @@ $(function() {
             $("#item4 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de López de Micay, verifique su conexión");
+            alert("error al pedir clima de Kuala Lumpur, verifique su conexión");
         }
     });
 
@@ -280,7 +280,7 @@ $(function() {
             $("#item5 .humedad_y_viento").html(`Humedad: ${respuesta.current.humidity}% | Viento: ${respuesta.current.wind_kph}Kph ${respuesta.current.wind_dir}`)
         },
         error: function () {
-            alert("error al pedir clima de López de Micay, verifique su conexión");
+            alert("error al pedir clima de Lisboa, verifique su conexión");
         }
     });
 

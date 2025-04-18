@@ -1,8 +1,31 @@
-/* Carousel principal */
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Tarjetas */
+
+.card {
+    border-bottom-right-radius: 4em;
+    box-shadow: 5px 5px 10px #e1e1e1;
+    background: linear-gradient(to left, teal 50%, #26282b 50%);
+    background-size: 200%;
+    background-position: right;
+    color: white;
+    transition: background-position 0.5s ease-out;
+    border: unset;
+    box-shadow: 5px 5px 10px #585858 !important;
+}
+
+/*  Sombras blancas con el dark mode ... */
+[data-bs-theme=dark] .card {
+    box-shadow: 5px 5px 10px #000000 !important;
+}
+
+.card:hover {
+    background-position: left;
+}
+
+/* Carousel principal */
 .carousel-item-principal {
     background-size: cover;
     background-position: center;
@@ -250,6 +273,10 @@ h6 {
     }
 }
 
+#carousel_opiniones .carousel-inner {
+    min-height: 300px;
+}
+
 /*Articulos*/
 body {
     margin: 0;
@@ -270,7 +297,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .contenedor {
